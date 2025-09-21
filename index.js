@@ -12,8 +12,10 @@ app.get('/', (req, res) => {
   res.send('Subscription Service API is running!');
 });
 
-// Use the authentication routes
+// Use the route files
 app.use('/auth', require('./auth'));
+app.use('/subscriptions', require('./subscriptions')); // Add this line
+app.use('/content', require('./content'));           // Add this line
 
 
 // === START SERVER ===
